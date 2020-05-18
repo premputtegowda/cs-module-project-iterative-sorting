@@ -18,24 +18,21 @@ def binary_search(arr, target):
     low = 0
     print(arr)
     # Your code here
-    while low < high:
+    while low <= high:
         mid = (high+low)//2
         print("mid", mid)
         arr[mid]
         if target == arr[mid]:
-            print("target", mid)
-            return mid
+            
+            return mid 
         elif target > arr[mid]:
-            low = mid
+            low = mid + 1
             print("low", low)
             
-            
+          
         else:
-            high = mid
+            high = mid - 1
             print("high", high)
 
     return -1  # not found
 
-arr1 = [-9, -8, -6, -4, -3, -2, 0, 1, 2, 3, 5, 7, 8, 9]
-target = 0
-print(binary_search(arr1, 0))
